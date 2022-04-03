@@ -10,7 +10,6 @@ import Historial from "../Historial/Historial";
 const historial = [];
 
 class Diseño extends Component {
-  //Este es el constructor base y el estado inicial
   constructor(props) {
     super(props);
     this.state = {
@@ -19,8 +18,7 @@ class Diseño extends Component {
     };
   }
 
-  //  componentDidUpdate es para actualizar el estado del constructor
-  //y la condicion lo que hace es ver si hay cambio si cambia el estado del contador y si cambio  los agrega al historial
+  
   componentDidUpdate(estadoPrevio) {
     if (estadoPrevio.contador !== this.state.contador) {
       historial.push(this.state.seleccionAnterior);
